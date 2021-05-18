@@ -13,7 +13,7 @@ class Request:
     def __init__(self):
         self.session = requests.session()
 
-    def send(self, method, url , **kwargs):
+    def send(self, method, url, **kwargs):
         """
         发送请求的方法
         :param method: 请求方法
@@ -31,6 +31,7 @@ class Request:
 
         if param_name in param_dict:
             data = param_dict.get(param_name)
+            # isinstance() 函数判断一个对象是否是一个已知的类型，类似 type()。
             if isinstance(data, str):
                 try:
                     data = json.loads(data)

@@ -21,7 +21,7 @@ class DoExcel:
     def read_data(self):
 
         wb = load_workbook(self.filename)
-        if self.sheetname is  None:
+        if self.sheetname is None:
             ws = wb.active
         else:
             ws = wb[self.sheetname]
